@@ -42,7 +42,7 @@ function itemOutput(item) {
 document.addEventListener("DOMContentLoaded", function () {
     // Handler when the DOM is fully loaded
     $.ajax({
-        url: "/arrivalResponse.json"
+        url: "https://www.northernquest.com/duetto/duettoAPI.php?no-cache=1"
     }).done(function (response) {
 
         for (x = 0; x < response.length; x++) {
