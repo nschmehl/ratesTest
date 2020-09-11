@@ -3,7 +3,8 @@
     padding-left: 20%!important;
 }
 
-body {
+body, html {
+    overflow-x: hidden;
     margin: 0;
     background-color: #003e81;
     font-family: 'proxima-nova', sans-serif;
@@ -137,4 +138,24 @@ button.CTA {
     padding: 14px 25px;
     font-weight: 600;
     text-transform:uppercase;
+}
+/* iphone 5 crap */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+    .JFrontierCal .JFrontierCal-Header-Cell, .JFrontierCal .JFrontierCal-Header-Cell-Last {
+        width: 44px!important;
+    }
+    .JFrontierCal .JFrontierCal-Week-Header-Cell, .JFrontierCal .JFrontierCal-Week-Header-Cell-Last, .JFrontierCal .JFrontierCal-PrevMonth-Week-Header-Cell, .JFrontierCal .JFrontierCal-NextMonth-Week-Header-Cell, .JFrontierCal .JFrontierCal-NextMonth-Week-Header-Cell-Last {
+        width: 44px!important;
+    }
+
+    .JFrontierCal-Day-Cell.ui-droppable {
+        width: 44px!important;
+    }
+
+    .JFrontierCal-Modal-Agenda-Item, .JFrontierCal .JFrontierCal-Day-Cell .JFrontierCal-Agenda-Item {
+        font-size: 9.5px!important;
+    }
 }

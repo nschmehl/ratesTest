@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (price > 300){
             var labelColor = "#ffffff";
             var backgroundColor = "#022c5b";
+            price = "$"+price;
         } else {
             var labelColor = "#ffffff";
             var backgroundColor = "#529ff5";
@@ -140,8 +141,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (typeof item.restriction !== "undefined"){
             backgroundColor = "#6b0000";
-            labelColor = "#6b0000!important";
+            labelColor = "#6b0000";
             price = "restricted";
+        }
+
+        if (typeof item.isComp !== "undefined"){
+            backgroundColor = "foo";
+            labelColor = "#ffffff";
+            price = "comp";
         }
 
         jfcalplugin.addAgendaItem(
