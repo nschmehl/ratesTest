@@ -5,8 +5,8 @@
 
 body {
     margin: 0;
-    background-color: rgb(36, 35, 35);
-    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #003e81;
+    font-family: 'proxima-nova', sans-serif;
 }
 
 button {
@@ -30,17 +30,15 @@ button {
 #toolbar {
     width: 100vw;
     height: 48px;
-    margin-top: 100px;
-    background: #003e81;
+    background: #022c5b;
     color: white;
-    border:none;
+    border: 1px solid black;
 
 }
 #mycal {
     width: 100vw!important;
-    border: 1px solid #003e81;
-    width: 100vw;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-top: none;
 }
 
 .ui-button-text-only .ui-button-text  {
@@ -48,6 +46,8 @@ button {
 }
 .JFrontierCal-Header-Cell {
     text-align: center;
+    font-size: 13px!important;
+    font-weight: 500!important;
 }
 .JFrontierCal-Week-Header-Cell {
     font-weight: 600!important;
@@ -70,7 +70,7 @@ button {
 }
 
 .JFrontierCal .JFrontierCal-Week-Header-Cell-Last, .JFrontierCal .JFrontierCal-NextMonth-Week-Header-Cell-Last {
-    border-right: 1px solid #0354ac;
+    border-right: 1px solid black;
     background-color: #0354ac;
     color: #82beff;
     font-family: 'Roboto Condensed', sans-serif!important;
@@ -89,12 +89,10 @@ button {
     font-size: 10px;
     margin-left: -1px!important;
     margin-bottom:-5px!important;
-    color: black;
     margin-left: 2px!important;
     padding-top: 6px;
     padding-bottom: 6px;
     border-radius: 0!important;
-    background-color: rgba(254,254,255, 0.9)!important;
 }
 
 .JFrontierCal-Header-Cell {
@@ -107,20 +105,18 @@ button {
     padding-top: 5px!important;
 }
 
-.JFrontierCal-Day-Cell.ui-droppable.JFrontierCal-Day-Cell-Last {
-    border-right: 1px solid #0354ac;
-}
+
 
 .JFrontierCal-Day-Cell.JFrontierCal-PrevMonth-Day-Cell.ui-droppable, .JFrontierCal-Day-Cell.JFrontierCal-NextMonth-Day-Cell.ui-droppable, .JFrontierCal-Week-Header-Cell.JFrontierCal-NextMonth-Week-Header-Cell, .JFrontierCal-Week-Header-Cell.JFrontierCal-PrevMonth-Week-Header-Cell {
     background-color: #82beff!important;
 }
 
-.JFrontierCal .JFrontierCal-Day-Cell, .JFrontierCal .JFrontierCal-Day-Cell-Last {
-    color: black;
+
+.JFrontierCal-Day-Cell-Last, .JFrontierCal-NextMonth-Day-Cell-Last {
+    border-right: 1px solid black!important;
 }
 
 .JFrontierCal-Modal-Agenda-Item, .JFrontierCal .JFrontierCal-Day-Cell .JFrontierCal-Agenda-Item {
-    color: black;
     margin-left: 2px!important;
 }
 
@@ -128,4 +124,17 @@ button {
     width: calc(14vw - 6px)!important;
     border-radius: 0!important;
     padding-top: 1px;
+}
+
+.content {
+    margin: 10vw;
+    width: auto;
+    color: white;
+}
+
+button.CTA {
+    margin-top: 5vw;
+    padding: 14px 25px;
+    font-weight: 600;
+    text-transform:uppercase;
 }

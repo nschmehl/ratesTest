@@ -125,18 +125,21 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
     });
 
-    function addItem(price, arrivalDate){
-        var arrivalDateObj = Date.parse(arrivalDate)
+    function addItem(item){
+        var price = item.totalRate
+        var arrivalDateObj = Date.parse(item.arrival);
         
-        if (price == 0){
-            var labelColor = "#000000";
-            var backgroundColor = "#7db6f3";
-            price = "FREE";
+        if (price > 300){
+            var labelColor = "#ffffff";
+            var backgroundColor = "#022c5b";
         } else {
-            var labelColor = "#000000";
-            var backgroundColor = "#7db6f3"
+            var labelColor = "#ffffff";
+            var backgroundColor = "#529ff5";
             price = "$"+price;
         }
+
+        //if (item.roomsAvailable ==  0)
+        //backgroundColor = "#6b0000";
 
         jfcalplugin.addAgendaItem(
             "#mycal",
@@ -157,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         success: function(response) {
             for (x = 0; x < response.length; x++) {
                 item = response[x];
-                addItem(item.totalRate, item.arrival);
+                addItem(item);
             }
         }
     });
