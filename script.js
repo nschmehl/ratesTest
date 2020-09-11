@@ -138,8 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
             price = "$"+price;
         }
 
-        //if (item.roomsAvailable ==  0)
-        //backgroundColor = "#6b0000";
+        if (typeof item.restriction !== "undefined"){
+            backgroundColor = "#6b0000";
+            labelColor = "#6b0000!important";
+            price = "restricted";
+        }
 
         jfcalplugin.addAgendaItem(
             "#mycal",
