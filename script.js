@@ -139,30 +139,26 @@ document.addEventListener("DOMContentLoaded", function () {
             price = "$"+price;
         }
 
-        if (typeof item.restriction !== "undefined"){
-            backgroundColor = "transparent";
-            labelColor = "transparent";
-            price = "restricted";
-        }
-
         if (typeof item.isComp !== "undefined"){
             backgroundColor = "transparent";
             labelColor = "green";
             price = "comp";
         }
-
-        jfcalplugin.addAgendaItem(
-            "#mycal",
-            price,
-            arrivalDateObj,
-	        arrivalDateObj,
-            true,
-            {},
-            {
-                backgroundColor: backgroundColor,
-                foregroundColor: labelColor
-            }	
-        );
+        if (typeof item.restriction == "undefined"){
+            console.log(item.restriction)
+            jfcalplugin.addAgendaItem(
+                "#mycal",
+                price,
+                arrivalDateObj,
+                arrivalDateObj,
+                true,
+                {},
+                {
+                    backgroundColor: backgroundColor,
+                    foregroundColor: labelColor
+                }	
+            );
+        }
     }
     $.ajax({
         url: 'https://www.northernquest.com/duetto/duettoAPI.php?no-cache=1&memberId='+memberId,
