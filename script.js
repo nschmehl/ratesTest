@@ -130,24 +130,24 @@ document.addEventListener("DOMContentLoaded", function () {
         var arrivalDateObj = Date.parse(item.arrival);
         
         if (price > 300){
-            var labelColor = "#ffffff";
-            var backgroundColor = "#022c5b";
+            var labelColor = "#ff5722";
+            var backgroundColor = "transparent";
             price = "$"+price;
         } else {
-            var labelColor = "#ffffff";
-            var backgroundColor = "#529ff5";
+            var labelColor = "#ff5722";
+            var backgroundColor = "transparent";
             price = "$"+price;
         }
 
         if (typeof item.restriction !== "undefined"){
-            backgroundColor = "#6b0000";
-            labelColor = "#6b0000";
+            backgroundColor = "transparent";
+            labelColor = "transparent";
             price = "restricted";
         }
 
         if (typeof item.isComp !== "undefined"){
-            backgroundColor = "foo";
-            labelColor = "#ffffff";
+            backgroundColor = "transparent";
+            labelColor = "green";
             price = "comp";
         }
 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
             {},
             {
                 backgroundColor: backgroundColor,
-                labelColor: labelColor
+                foregroundColor: labelColor
             }	
         );
     }

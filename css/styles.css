@@ -6,15 +6,24 @@
 body, html {
     overflow-x: hidden;
     margin: 0;
-    background-color: #003e81;
+    background-color: #e04a1b;
     font-family: 'proxima-nova', sans-serif;
 }
 
 button {
     margin-top: 7px;
-    width: 30px;
-    margin-right: 0!important;
-    margin-left: 0!important;
+    background-color:#bf360c!important;
+    background: #bf360c!important;
+    color: white!important;
+    border: none!important;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    height: auto;
+    font-weight: 400;
+    letter-spacing: .5px;
+    border-radius: 2px!important;
 }
 
 #myCurrentMonth {
@@ -31,15 +40,20 @@ button {
 #toolbar {
     width: 100vw;
     height: 48px;
-    background: #022c5b;
+    background: #8b280a;
     color: white;
     border: 1px solid black;
-
+    border-bottom: 1px solid black;
+    margin-left: 1px;
+    border-radius: 0;
 }
+
 #mycal {
     width: 100vw!important;
     border: 1px solid black;
     border-top: none;
+    background-color:white;
+    margin-left: 1px;
 }
 
 .ui-button-text-only .ui-button-text  {
@@ -49,32 +63,33 @@ button {
     text-align: center;
     font-size: 13px!important;
     font-weight: 500!important;
+    background-color: #777777!important;
 }
 .JFrontierCal-Week-Header-Cell {
     font-weight: 600!important;
-    border-top: 1px solid #82beff;
-    border-right: 1px solid #82beff;
+    border-top: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
     width: 14vw!important;
     border-left: 1px solid transparent;
-    background-color: #0354ac!important;
-    color: #dbecff!important;
+    background-color: #ffffff!important;
+    color: #7d7d7d!important;
     margin-bottom: -1px!important;
+    font-family: 'Roboto Condensed', sans-serif!important;
 
 }
 
 .JFrontierCal-Day-Cell.ui-droppable {
-    border-right: 1px solid #82beff;
+    border-right: 1px solid lightgrey;
     width: 14vw!important;
     background-image: url()!important;
-    background-color: #0354ac;
+    background-color: #ffffff;
     height: 12vw!important;
 }
 
 .JFrontierCal .JFrontierCal-Week-Header-Cell-Last, .JFrontierCal .JFrontierCal-NextMonth-Week-Header-Cell-Last {
     border-right: 1px solid black;
-    background-color: #0354ac;
-    color: #82beff;
-    font-family: 'Roboto Condensed', sans-serif!important;
+    background-color: #ffffff;
+    color: #7d7d7d;
 }
 
 .ui-draggable.JFrontierCal-Agenda-Item {
@@ -101,7 +116,7 @@ button {
     border-left: 1px solid transparent!important;
     height: 20px!important;
     font-family: 'Roboto Condensed', sans-serif!important;
-    background-color: #0354ac!important;
+    background-color: #ffffff!important;
     text-transform: uppercase;
     padding-top: 5px!important;
 }
@@ -109,7 +124,7 @@ button {
 
 
 .JFrontierCal-Day-Cell.JFrontierCal-PrevMonth-Day-Cell.ui-droppable, .JFrontierCal-Day-Cell.JFrontierCal-NextMonth-Day-Cell.ui-droppable, .JFrontierCal-Week-Header-Cell.JFrontierCal-NextMonth-Week-Header-Cell, .JFrontierCal-Week-Header-Cell.JFrontierCal-PrevMonth-Week-Header-Cell {
-    background-color: #82beff!important;
+    background-color: lightgrey!important;
 }
 
 
@@ -139,7 +154,19 @@ button.CTA {
     font-weight: 600;
     text-transform:uppercase;
 }
+
+.JFrontierCal .JFrontierCal-Header-Cell, .JFrontierCal .JFrontierCal-Header-Cell-Last {
+    background-color: #777777!important;
+    color: white;
+    font: 13px verdana;
+}
+
+.JFrontierCal-Modal-Agenda-Item, .JFrontierCal .JFrontierCal-Day-Cell .JFrontierCal-Agenda-Item {
+font-size: 18px;
+}
+
 /* iphone 5 crap */
+
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px)
 and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
